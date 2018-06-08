@@ -1,6 +1,7 @@
 window.onload = function(){
     console.log('Hello Rigo from the console!');
     document.querySelector('.error').style.display = "none";
+    document.querySelector('body').addEventListener('click', refreshPage);
     
     var first = '...a ';
     var adj = ['small ','pink ','tall '];
@@ -18,3 +19,7 @@ window.onload = function(){
     var finalSentence = first + adj[rdm1] + noun[rdm2] + action[rdm3] + possession[rdm4] + place[rdm5];
     document.querySelector('#excuse').innerHTML = finalSentence;
 };
+
+function refreshPage(){
+    window.location.reload();
+}
